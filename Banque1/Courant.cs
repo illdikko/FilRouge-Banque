@@ -4,44 +4,47 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace FilRouge_Banque
+namespace Banque1
 {
-    public class Courant
+    class Courant : Compte
     {
-        //Les propriétés publiques
+        #region Variables membres
+       
 
         private double _lignecredit;
-        private double _solde;
-        public string Numero { get; set; }
-        public double Solde { get; private set; } //Ajout d'une condition possible : Mon solde doit toujours être supérieur à ma limite solde+ligne de crédit.
+
+        #endregion
+
+        #region Propriétés
+        
+
         public double LigneDeCredit
         {
-            get { return _lignecredit; } //permet d'afficher le montant de la ligne de crdit (découvert)
+            get { return _lignecredit; } //permet d'afficher le montant de la ligne de cérdit (découvert)
             set
             {
-                if (value < 0) _lignecredit = 0; //Une autorisation à découvert est forcément = ou supérieure à zéro!
-                else _lignecredit = value;
+                if (value >= 0 && value >= -Solde) _lignecredit = value; //Une autorisation à découvert est forcément = ou supérieure à zéro!
             }
 
         }
-        public Personne Titulaire;
 
+        #endregion
 
-        //        Les méthodes publiques :
-
-
-
-        public void Retrait(double Montant)
+        #region Methodes et Opérateurs
+        
+        public override void Retrait(double montant)
         {
-            if (Montant > 0 && Montant <= _solde + _lignecredit) _solde = _solde - Montant;
+            base.Retrait(montant, LigneDeCredit);
 
         }
 
-        public void Depot(double Montant)
+        protected override double CalculInteret()
         {
-            if (Montant > 0) _solde = _solde + Montant;
-
+            if (Solde >= 0) return Solde * 0.03;
+            else return Solde * 0.0975;
         }
+
+        #endregion
     }
 
 

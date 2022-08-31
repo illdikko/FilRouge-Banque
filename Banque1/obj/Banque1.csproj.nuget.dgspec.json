@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\c.ducourtieux\\source\\repos\\FilRouge\\Banque1\\Banque1.csproj": {}
+    "C:\\Users\\c.ducourtieux\\source\\repos\\FilRouge-Banque\\Banque1\\Banque1.csproj": {}
   },
   "projects": {
-    "C:\\Users\\c.ducourtieux\\source\\repos\\FilRouge\\Banque1\\Banque1.csproj": {
+    "C:\\Users\\c.ducourtieux\\source\\repos\\FilRouge-Banque\\Banque1\\Banque1.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\c.ducourtieux\\source\\repos\\FilRouge\\Banque1\\Banque1.csproj",
+        "projectUniqueName": "C:\\Users\\c.ducourtieux\\source\\repos\\FilRouge-Banque\\Banque1\\Banque1.csproj",
         "projectName": "Banque1",
-        "projectPath": "C:\\Users\\c.ducourtieux\\source\\repos\\FilRouge\\Banque1\\Banque1.csproj",
+        "projectPath": "C:\\Users\\c.ducourtieux\\source\\repos\\FilRouge-Banque\\Banque1\\Banque1.csproj",
         "packagesPath": "C:\\Users\\c.ducourtieux\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\c.ducourtieux\\source\\repos\\FilRouge\\Banque1\\obj\\",
+        "outputPath": "C:\\Users\\c.ducourtieux\\source\\repos\\FilRouge-Banque\\Banque1\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
